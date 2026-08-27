@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Perioperative Tools | Pre-operative Decision Support Portal</title>
+  <title>Perioperative Tools | Preoperative Decision Support Portal</title>
   <meta
     name="description"
-    content="Proof-of-concept pre-operative decision-support portal for perioperative supportive care."
+    content="Proof-of-concept preoperative decision-support portal for perioperative supportive care."
   />
 
   <style>
     :root {
       --text: #f8fcfb;
-      --muted: rgba(239, 248, 244, 0.78);
+      --muted: rgba(239, 248, 244, 0.82);
       --line: rgba(255, 255, 255, 0.14);
       --card: rgba(8, 22, 18, 0.48);
       --card-hover: rgba(10, 33, 26, 0.70);
@@ -83,30 +83,8 @@
       padding: 34px 0 8px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-end;
       gap: 24px;
-    }
-
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 11px;
-      font-size: 0.94rem;
-      font-weight: 650;
-      letter-spacing: 0.02em;
-      color: rgba(255, 255, 255, 0.90);
-    }
-
-    .brand-mark {
-      width: 32px;
-      height: 32px;
-      display: grid;
-      place-items: center;
-      border: 1px solid var(--line);
-      border-radius: 50%;
-      background: rgba(255,255,255,0.06);
-      backdrop-filter: blur(12px);
-      font-size: 0.95rem;
     }
 
     .proof-pill {
@@ -131,7 +109,7 @@
     }
 
     .intro {
-      max-width: 920px;
+      max-width: 980px;
       margin-bottom: 48px;
     }
 
@@ -145,13 +123,23 @@
       text-shadow: 0 8px 45px rgba(0,0,0,0.36);
     }
 
+    .line-one {
+      display: block;
+      white-space: nowrap;
+    }
+
+    .line-two {
+      display: block;
+    }
+
     .subtitle {
       margin: 24px 0 0;
-      max-width: 760px;
-      font-size: clamp(1.04rem, 2.15vw, 1.34rem);
+      max-width: none;
+      font-size: clamp(1.02rem, 2vw, 1.28rem);
       line-height: 1.55;
       color: var(--muted);
-      text-wrap: balance;
+      white-space: nowrap;
+      overflow-wrap: normal;
     }
 
     .tools {
@@ -319,8 +307,13 @@
       line-height: 1.55;
     }
 
+    @media (max-width: 1100px) {
+      .subtitle { white-space: normal; }
+    }
+
     @media (max-width: 900px) {
       .tools { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .line-one { white-space: normal; }
     }
 
     @media (max-width: 560px) {
@@ -349,19 +342,16 @@
 <body>
   <div class="page">
     <header>
-      <div class="brand">
-        <span class="brand-mark" aria-hidden="true">✦</span>
-        <span>Perioperative Tools</span>
-      </div>
       <div class="proof-pill">Proof of concept</div>
     </header>
 
     <main>
       <section class="intro" aria-labelledby="page-title">
-        <h1 id="page-title">Pre-operative Decision<br />Support Portal</h1>
-        <p class="subtitle">
-          Perioperative supportive-care tools for structured pre-operative decision making.
-        </p>
+        <h1 id="page-title">
+          <span class="line-one">Preoperative Decision</span>
+          <span class="line-two">Support Portal</span>
+        </h1>
+        <p class="subtitle">Preoperative supportive care tools for structured preoperative decision making.</p>
       </section>
 
       <nav class="tools" aria-label="Perioperative tools">
@@ -458,7 +448,7 @@
     <footer>
       <div>Prototype only · Decision support only · Subject to revision.</div>
       <div class="footer-right">
-        <div>RWT · v0.4</div>
+        <div>RWT · v0.5</div>
         <div class="footer-sub">Dr. A. Gilani</div>
       </div>
     </footer>

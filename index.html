@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Perioperative Tools | Predictive Decision Support Portal</title>
+  <title>Perioperative Tools | Pre-operative Decision Support Portal</title>
   <meta
     name="description"
-    content="Proof-of-concept predictive decision-support portal for perioperative supportive care."
+    content="Proof-of-concept pre-operative decision-support portal for perioperative supportive care."
   />
 
   <style>
@@ -295,6 +295,19 @@
       background: rgba(255,255,255,0.11);
     }
 
+    .footer-right {
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 2px;
+    }
+
+    .footer-sub {
+      font-size: 0.70rem;
+      color: rgba(233, 242, 238, 0.48);
+    }
+
     footer {
       padding: 22px 0 30px;
       display: flex;
@@ -318,6 +331,10 @@
       .tool { min-height: 168px; }
       .tool h2 { max-width: none; }
       footer { flex-direction: column; }
+      .footer-right {
+        text-align: left;
+        align-items: flex-start;
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -341,7 +358,7 @@
 
     <main>
       <section class="intro" aria-labelledby="page-title">
-        <h1 id="page-title">Predictive Decision<br />Support Portal</h1>
+        <h1 id="page-title">Pre-operative Decision<br />Support Portal</h1>
         <p class="subtitle">
           Perioperative supportive-care tools for structured pre-operative decision making.
         </p>
@@ -440,7 +457,10 @@
 
     <footer>
       <div>Prototype only · Decision support only · Subject to revision.</div>
-      <div>RWT · v0.3</div>
+      <div class="footer-right">
+        <div>RWT · v0.4</div>
+        <div class="footer-sub">Dr. A. Gilani</div>
+      </div>
     </footer>
   </div>
 </body>
